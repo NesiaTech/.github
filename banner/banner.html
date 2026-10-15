@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<title>Nesia Tech · GitHub banner</title>
+<!-- Live design system from nesia.tech: tokens + components. -->
+<link rel="stylesheet" href="https://nesia.tech/styles.css">
+<script>
+  // ?theme=light|dark selects the variant to render.
+  var t = new URLSearchParams(location.search).get('theme');
+  if (t) document.documentElement.setAttribute('data-theme', t);
+</script>
+<style>
+  html, body { width: 1280px; height: 400px; overflow: hidden; }
+  .grid-bg, .net { position: absolute; inset: auto; top: 0; left: 0; width: 1280px; height: 400px; }
+  .grid-bg {
+    mask-image: radial-gradient(120% 120% at 82% 40%, #000 25%, transparent 85%);
+    -webkit-mask-image: radial-gradient(120% 120% at 82% 40%, #000 25%, transparent 85%);
+  }
+  .stage {
+    height: 400px; max-width: none;
+    padding: 34px 56px 0;
+  }
+  .meta { font-size: 13px; margin-bottom: 26px; }
+  .wordmark { font-size: 136px; }
+  .rule { width: 84px; margin: 28px 0 22px; }
+  .tagline { font-size: 25px; max-width: none; }
+</style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <!-- Island network from the home page, rescaled to the banner. -->
+  <svg class="net" viewBox="0 0 1280 400" aria-hidden="true">
+    <g>
+      <line pathLength="1" x1="1010" y1="62"  x2="1110" y2="132"/>
+      <line pathLength="1" x1="1110" y1="132" x2="1058" y2="236"/>
+      <line pathLength="1" x1="1058" y1="236" x2="1170" y2="284"/>
+      <line pathLength="1" x1="1010" y1="62"  x2="1058" y2="236"/>
+      <line pathLength="1" x1="1170" y1="284" x2="1124" y2="372"/>
+      <line pathLength="1" x1="1058" y1="236" x2="966"  y2="330"/>
+      <line pathLength="1" x1="966"  y1="330" x2="1124" y2="372"/>
+    </g>
+    <circle class="node"     cx="1010" cy="62"  r="5"/>
+    <circle class="node"     cx="1110" cy="132" r="4"/>
+    <circle class="node"     cx="1058" cy="236" r="6"/>
+    <circle class="node dim" cx="1170" cy="284" r="3.5"/>
+    <circle class="node"     cx="1124" cy="372" r="4.5"/>
+    <circle class="node dim" cx="966"  cy="330" r="3.5"/>
+  </svg>
+
+  <main class="stage">
+    <div class="meta">
+      <span>Macaronesia</span>
+      <span><b>Status</b> <span class="status">In development</span></span>
+      <span><b>Coord</b> 28.34, −23.82</span>
+    </div>
+    <h1 class="wordmark">nesia<span class="tech">.tech</span></h1>
+    <div class="rule"></div>
+    <p class="tagline">Technology born in the Atlantic.</p>
+  </main>
+</body>
+</html>
